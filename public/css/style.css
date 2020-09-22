@@ -37,3 +37,12 @@ body {
     color: rgb(235, 102, 26);
     font-weight: 200;
 }
+
+.social-networks {
+    font-size: 3em;
+    display: flex;
+}
+
+.social-networks a {
+    padding: 0 15px;
+}
