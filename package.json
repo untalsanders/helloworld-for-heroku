@@ -1,15 +1,19 @@
 {
-  "name": "sg-app-test-01",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4"
-  }
+    "name": "@sandersgutierrez/hello-world-for-heroku",
+    "version": "1.0.0-alpha",
+    "description": "A project for a proof of concept of Heroku.",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "keywords": [
+        "express",
+        "heroku"
+    ],
+    "author": "Sanders Gutierrez <ing.sanders@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "twing": "^5.0.2"
+    }
 }

@@ -1,8 +1,15 @@
-'use strict'
+"use strict";
 
-const express = require('express')
-let port = process.env.PORT || 3000
-let app = express()
+const { join } = require("path");
+const app = require("express")();
+const { TwingEnvironment, TwingLoaderFilesystem } = require("twing");
 
-app.get('/', (req, res) => res.send('Hola Mundo desde Heroku'))
-app.listen(port, () => console.log(`App iniciada en http://localhost:${port}`))
+const port = process.env.NODE_PORT || 3000;
+let loader = new TwingLoaderFilesystem(join(__dirname, "views"));
+let twing = new TwingEnvironment(loader);
+
+app.get("/", (req, res) => {
+    twing.render("index.twig").then((output) => res.end(output));
+});
+
+app.listen(port, () => console.log(`App iniciada en http://localhost:${port}`));
