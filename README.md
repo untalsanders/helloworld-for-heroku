@@ -11,7 +11,11 @@ $ npm install
 ## Run
 
 ```bash
+# Production
 $ npm start
+
+# Development
+$ npm run start:dev
 ```
 
 ## License
