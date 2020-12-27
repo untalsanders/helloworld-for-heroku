@@ -2,6 +2,8 @@
 
 A project for a proof of concept of Heroku.
 
+![Screenshot](screenshot-helloworld-heroku.png)
+
 ## Install
 
 ```bash
