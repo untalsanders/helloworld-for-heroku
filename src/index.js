@@ -1,22 +1,23 @@
-"use strict";
+'use strict'
 
-const { join } = require("path");
-const express = require("express");
-const { TwingEnvironment, TwingLoaderFilesystem } = require("twing");
+const { join } = require('path')
+const express = require('express')
+const { twig } = require('twig')
 
-const host = process.env.HOST || "0.0.0.0";
-const port = process.env.PORT || 3000;
-const app = express();
+const host = process.env.HOST || '0.0.0.0'
+const port = process.env.PORT || 3000
+const app = express()
 
-app.use("/static", express.static(join(process.cwd(), "public")));
+app.set('twig options', {
+    allow_async: true,
+    static_variables: false,
+})
+app.set('views', join(__dirname, 'views'))
 
-let loader = new TwingLoaderFilesystem(join(__dirname, "views"));
-let twing = new TwingEnvironment(loader);
+app.use('/static', express.static(join(process.cwd(), 'public')))
 
-app.get("/", (req, res) => {
-    twing.render("index.twig").then((output) => res.end(output));
-});
+app.get('/', (req, res) => {
+    res.render('index.twig')
+})
 
-app.listen(port, host, () =>
-    console.log(`App iniciada en http://${host}:${port}`)
-);
+app.listen(port, host, () => console.log(`App iniciada en http://${host}:${port}`))
