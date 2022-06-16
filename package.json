@@ -12,7 +12,7 @@
         "express",
         "heroku"
     ],
-    "author": "Sanders Gutierrez <ing.sanders@gmail.com>",
+    "author": "Sanders Gutierrez <ing.sanders@gmail.com> (https://sandersgutierrez.com)",
     "license": "MIT",
     "dependencies": {
         "express": "^4.17.1",

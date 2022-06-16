@@ -1,6 +1,6 @@
 # HelloWorld App
 
-A project for a proof of concept of Heroku.
+A project for a proof of concept on Heroku Platform.
 
 ![Screenshot](screenshot-helloworld-heroku.png)
 
