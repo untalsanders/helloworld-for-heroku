@@ -4,8 +4,8 @@ const { join } = require('path')
 const express = require('express')
 const { twig } = require('twig')
 
-const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3000
+const HOST = process.env.HOST || '0.0.0.0'
+const PORT = process.env.PORT || 3000
 const app = express()
 
 app.set('twig options', {
@@ -20,4 +20,4 @@ app.get('/', (req, res) => {
     res.render('index.twig')
 })
 
-app.listen(port, host, () => console.log(`App iniciada en http://${host}:${port}`))
+app.listen(PORT, HOST, () => console.log(`Server is running on http://${HOST}:${PORT}`))
